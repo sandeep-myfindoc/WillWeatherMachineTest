@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.playerDetail.PlayerDetailActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="@color/color_list"
+            android:gravity="center_horizontal"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:text="@string/heading_player"
+            android:textSize="@dimen/extra_large_text"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/color_black">
+
+        </TextView>
+        <LinearLayout
+            android:paddingLeft="@dimen/padding_screen"
+            android:paddingRight="@dimen/padding_screen"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Player Name -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelName"
+                    style="@style/label"
+                    android:text="Player name"
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelNameValue"
+                    android:layout_toRightOf="@+id/labelName"
+                    style="@style/label"
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+            <!-- Player Position -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelPosition"
+                    style="@style/label"
+                    android:text="Position: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelPositionValue"
+                    android:layout_toRightOf="@+id/labelPosition"
+                    style="@style/label"
+
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+            <!-- Player Height -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelheight"
+                    style="@style/label"
+                    android:text="Height: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelheightValue"
+                    android:layout_toRightOf="@+id/labelheight"
+                    style="@style/label"
+
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+            <!-- Player Weight -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelweight"
+                    style="@style/label"
+                    android:text="Weight: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelweightValue"
+                    android:layout_toRightOf="@+id/labelweight"
+                    style="@style/label"
+                    android:text="@string/heading_player"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:background="@color/color_list"
+            android:gravity="center_horizontal"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:text="@string/heading_team"
+            android:textSize="@dimen/extra_large_text"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#000000">
+
+        </TextView>
+        <LinearLayout
+            android:paddingLeft="@dimen/padding_screen"
+            android:paddingRight="@dimen/padding_screen"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- team Name -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelTeamName"
+                    style="@style/label"
+                    android:text="Team Name: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelTeamValue"
+                    android:layout_toRightOf="@+id/labelTeamName"
+                    style="@style/label"
+
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+            <!-- team City -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelCity"
+                    style="@style/label"
+                    android:text="City: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelCityValue"
+                    android:layout_toRightOf="@+id/labelCity"
+                    style="@style/label"
+
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+            <!-- team Confrence -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelConfrence"
+                    style="@style/label"
+                    android:text="Confrence: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+
+                <TextView
+                    android:id="@+id/labelConfrenceValue"
+                    style="@style/label"
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:layout_toRightOf="@+id/labelConfrence"
+
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/regular_text" />
+            </RelativeLayout>
+            <!-- team Divison -->
+            <RelativeLayout
+                android:layout_marginTop="@dimen/margin_row"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelDivision"
+                    style="@style/label"
+                    android:text="Division: "
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/color_light_textfield"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/margin_label"
+                    android:id="@+id/labelDivisionValue"
+                    android:layout_toRightOf="@+id/labelDivision"
+                    style="@style/label"
+                    android:textSize="@dimen/regular_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/color_black"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</layout>

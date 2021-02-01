@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WillyWeatherMachineTest</string>
+    <string name="msg_empty">There is no data to display</string>
+    <string name="msg_offline">Please check your network connectivity</string>
+    <string name="title_playerList">NBA Players List</string>
+    <string name="title_playerDetail">Player Detail</string>
+    <string name="heading_player">Player Info</string>
+    <string name="heading_team">Team Info</string>
+</resources>
