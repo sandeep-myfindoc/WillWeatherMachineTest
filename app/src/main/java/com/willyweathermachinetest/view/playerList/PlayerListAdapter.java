@@ -21,9 +21,11 @@ import com.willyweathermachinetest.sharedpreferences.SharedPreferencesName;
 
 public class PlayerListAdapter extends PagedListAdapter<Player,PlayerListAdapter.PlayerViewHolder>{
     private Context mContext;
+    private String emptyLabel;
     public PlayerListAdapter(Context mContext) {
         super(USER_COMPARATOR);
         this.mContext = mContext;
+        this.emptyLabel="__";
     }
     protected PlayerListAdapter(@NonNull DiffUtil.ItemCallback<Player> diffCallback) {
         super(diffCallback);
@@ -67,12 +69,9 @@ public class PlayerListAdapter extends PagedListAdapter<Player,PlayerListAdapter
         void bind(Player player,int position) {
             if (player.getFirstName() != null && player.getLastName() != null)
                 labelName.setText(String.format("%s %s", player.getFirstName(), player.getLastName()));
-            if (player.getPosition() != null)
-                labelPosition.setText(player.getPosition());
-            if (player.getHeightFeet() != null && player.getHeightInches()!=null)
-                labelPosition.setText(player.getHeightFeet());
-            if (player.getWeightPounds() != null)
-                labelPosition.setText(player.getWeightPounds());
+            labelPosition.setText(player.getPosition()!=null && !player.getPosition().equals("")?player.getPosition():emptyLabel);
+            labelHeight.setText(((player.getHeightFeet() != null && !player.getHeightFeet().equals("") ? player.getHeightFeet() : emptyLabel) + " Feet ") + ((player.getHeightInches() != null ? player.getHeightInches() : emptyLabel) + " Inches"));
+            labelWeight.setText((player.getWeightPounds() != null ? player.getWeightPounds() : emptyLabel) + " Pounds");
             if(position%2==0)
                 layoutRoot.setBackgroundColor(mContext.getResources().getColor(R.color.color_list));
             else

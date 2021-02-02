@@ -33,9 +33,9 @@ public class PlayerDetailActivity extends SuperActivity {
     private void updateUI() {
         if(player!=null) {
             binding.labelNameValue.setText(player.getFirstName() + " " + player.getLastName());
-            binding.labelPositionValue.setText(player.getPosition() != null ? player.getPosition() : emptyLabel);
-            binding.labelheightValue.setText((player.getHeightFeet() != null && !player.getHeightFeet().equals("") ? player.getHeightFeet() : emptyLabel + " Feet ") + (player.getHeightInches() != null ? player.getHeightInches() : emptyLabel + " Inches"));
-            binding.labelweightValue.setText(player.getWeightPounds() != null ? player.getPosition() : emptyLabel + " Pounds");
+            binding.labelPositionValue.setText(player.getPosition() != null && !player.getPosition().equals("") ? player.getPosition() : emptyLabel);
+            binding.labelheightValue.setText(((player.getHeightFeet() != null && !player.getHeightFeet().equals("") ? player.getHeightFeet() : emptyLabel )+ " Feet ") + ((player.getHeightInches() != null ? player.getHeightInches() : emptyLabel) + " Inches"));
+            binding.labelweightValue.setText((player.getWeightPounds() != null ? player.getWeightPounds() : emptyLabel) + " Pounds");
             binding.labelTeamValue.setText(player.getTeam().getFullName() != null ? player.getTeam().getFullName() : emptyLabel);
             binding.labelCityValue.setText(player.getTeam().getCity() != null ? player.getTeam().getCity() : emptyLabel);
             binding.labelConfrenceValue.setText(player.getTeam().getConference() != null ? player.getTeam().getConference() : emptyLabel);
